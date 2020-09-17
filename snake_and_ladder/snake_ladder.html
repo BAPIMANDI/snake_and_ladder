@@ -1,635 +1,475 @@
 <html>
-	<head>
-		<title>
-		Snake and Ladder Game
-			
-		</title>
-		 
-		<style type="text/css">
-		 /*tr{
-		 	background-color:yellow;
-		 }*/
-		 table{
-		 	height: 615px;
-		 	width: 605px;
-		 	text-align: center;
-		 	 background-image: url('https://assets.codepen.io/4543/chutes.png');*/
-             background-repeat: no-repeat;
-		  ;
-		    /*padding: px;*/
-		 }
-		 .background {
-		 	 
-             background-image: url('https://assets.codepen.io/4543/chutes.png');*/
-             background-repeat: no-repeat;
-   }
-   
-		
-        #dd{
-         	height: 600px;
- 			width: 600px;
- 			border: 2px solid pink;
- 			position: absolute;
- 			margin: auto;
- 			left:0;
- 			right: 0;
- 			top:0;
- 			bottom: 0;
- 			display: flex;
- 			align-items: center;
- 			justify-content: center;
- 			
- 			
-         }
-         #cc{
-         	height: 60px;
- 			width: 120px; 
- 			 
- 			 
- 			display: flex;
- 			align-items: left;
- 			justify-content: left;
- 			
-         }
-         #gg{
-         	height: 60px;
- 			width: 120px;
- 			 
- 			 
- 			 
- 			 
- 			display: flex;
- 			align-items: left;
- 			justify-content: left;
- 			
-         }
-         
-        td{
-        	height: 10px;
-        	width: 7px;
-            align-content: center;
-            	border-radius: 50%;
-        }
-        img{
-			height: 50px;
-			width: 50px;
-
-		}
- 
-
-		</style>
-	</head>
-	<body>
-
-	 
-		  
-   
-   <H1>Snake  And Lader</h1>
-  <div id="dd">
-
-		<table >
-			<tbody>
-			<tr> 
-		 	<td id="a100"></td>
-		 	<td id="a99" ></td>
-		 	<td id="a98" ></td>
-		 	<td id="a97" ></td> 
-		 	<td id="a96" ></td>
-		 	<td id="a95" ></td>
-		 	<td id="a94" ></td>
-		 	<td id="a93" ></td>
-		 	<td id="a92" ></td>
-		 	<td id="a91" ></td>
-		 </tr>
-		  <tr>
-			 
-		 	<td id="a81" ></td>
-		 	<td id="a82" ></td>
-		 	<td id="a83" ></td>
-		 	<td id="a84" ></td> 
-		 	<td id="a85" ></td>
-		 	<td id="a86" ></td>
-		 	<td id="a87" ></td>
-		 	<td id="a88" ></td>
-		 	<td id="a89" ></td>
-		 	<td id="a90" ></td>
-		 </tr>
-		 <tr>
-			 
-		 	<td id="a80" ></td>
-		 	<td id="a79" ></td>
-		 	<td id="a78" ></td>
-		 	<td id="a77" ></td> 
-		 	<td id="a76" ></td>
-		 	<td id="a75" ></td>
-		 	<td id="a74" ></td>
-		 	<td id="a73" ></td>
-		 	<td id="a72" ></td>
-		 	<td id="a71" ></td>
-		 </tr>
-		  <tr>
-			 
-		 	<td id="a61" ></td>
-		 	<td id="a62" ></td>
-		 	<td id="a63" ></td>
-		 	<td id="a64" ></td> 
-		 	<td id="a65" ></td>
-		 	<td id="a66" ></td>
-		 	<td id="a67" ></td>
-		 	<td id="a68" ></td>
-		 	<td id="a69" ></td>
-		 	<td id="a70"></td>
-		 </tr>
-		  <tr>
-			 
-		 	<td id="a60" ></td>
-		 	<td id="a59" ></td>
-		 	<td id="a58" ></td>
-		 	<td id="a57" ></td> 
-		 	<td id="a56" ></td>
-		 	<td id="a55" ></td>
-		 	<td id="a54" ></td>
-		 	<td id="a53" ></td>
-		 	<td id="a52" ></td>
-		 	<td id="a51" ></td>
-		 </tr>
-		  <tr>
-			 
-		 	<td id="a41" ></td>
-		 	<td id="a42" ></td>
-		 	<td id="a43" ></td>
-		 	<td id="a44" ></td> 
-		 	<td id="a45" ></td>
-		 	<td id="a46" ></td>
-		 	<td id="a47" ></td>
-		 	<td id="a48" ></td>
-		 	<td id="a49" ></td>
-		 	<td id="a50"></td>
-		 </tr>
-		 <tr>
-		 	<td id="a40" ></td>
-		 	<td id="a39" ></td>
-		 	<td id="a38" ></td>
-		 	<td id="a37" ></td> 
-		 	<td id="a36" ></td>
-		 	<td id="a35" ></td>
-		 	<td id="a34" ></td>
-		 	<td id="a33" ></td>
-		 	<td id="a32" ></td>
-		 	<td id="a31" ></td>
-		 </tr>
-
-		  <tr>
-		 	<td id="a21" ></td>
-		 	<td id="a22" ></td>
-		 	<td id="a23" ></td>
-		 	<td id="a24" ></td> 
-		 	<td id="a25" ></td>
-		 	<td id="a26" ></td>
-		 	<td id="a27" ></td>
-		 	<td id="a28" ></td>
-		 	<td id="a29" ></td>
-		 	<td id="a30" ></td>
-		 </tr>
-		 	<tr>
-		 	<td id="a20" ></td>
-		 	<td id="a19" ></td>
-		 	<td id="a18" ></td>
-		 	<td id="a17" ></td> 
-		 	<td id="a16" ></td>
-		 	<td id="a15" ></td>
-		 	<td id="a14" ></td>
-		 	<td id="a13" ></td>
-		 	<td id="a12" ></td>
-		 	<td id="a11" ></td>
-		 </tr>		 
-			<tr>
-			  
-		 	<td id="a1" ></td>
-		 	<td id="a2" ></td>
-		 	<td id="a3" ></td>
-		 	<td id="a4" ></td> 
-		 	<td id="a5"  ></td>
-		 	<td id="a6" ></td>
-		 	<td id="a7" ></td>
-		 	<td id="a8" ></td>
-		 	<td id="a9"  ></td>
-		 	<td id="a10" ></td>
-		 </tr>
-		
-		
-		
-		
-		</tbody>
-		 
-		 </table>
-
- 
-	 </div>
-
-<!-- <p id="1">A Paragraph.</p> -->
- 
-
-  <button type="button" onclick="myFunction()">Start New</button>
-<div   id="cc">
- 
-
-<input type="button" id="nextMove" value="Your Turn" onclick="nextMove()" style="background-color: blue;" />
- 
- 	
-<!-- <input type="button" id="nextMoves" value="Opponenet's Turn" /> <br> -->
-
-<img src="img.gif"  id="mg"/> 
-</div>
-<div id="gg">
-	<input type="button" id="nextMoves" value="Compoter" /> 
-	<img style="background-color: purple;" src="img.gif"  id="mge"/>
-</div> 
- 
-	</body>
-</html>
-<script> 
-	function myFunction(){
-	window.location.reload();
-    }
+  <head>
+    <title>
+    Snake And Ladder Game
+    
+    </title>
+    <link rel = "icon" href ="img.ico"
+      type = "image/x-icon">
+      
+      <style type="text/css">
+      
+      table{
+      height: 615px;
+      width: 605px;
+      text-align: center;
+      background-image: url('snake/chutes.png');
+      background-repeat: no-repeat;
+      }
+      .background {
+      background-image: url('snake/chutes.png');
+      background-repeat: no-repeat;
+      }
+      #dd{
+      height: 600px;
+      width: 600px;
+      /*border: 2px solid pink;*/
+      position: absolute;
+      margin: auto;
+      left:0;
+      right: 0;
+      top:0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      }
+      #cc{
+      height: 60px;
+      width: 120px;
+      display: flex;
+      align-items: left;
+      justify-content: left;
+      
+      }
+      #gg{
+      height: 60px;
+      width: 120px;
+      
+      display: flex;
+      align-items: left;
+      justify-content: left;
+      
+      }
+      
+      td{
+      height: 10px;
+      width: 7px;
+      align-content: center;
+      border-radius: 50%;
+      }
+      img{
+      height: 50px;
+      width: 50px;
+      }
+      </style>
+    </head>
+    <body>
+      
+      <H1>Snake  And Lader</h1>
+      <div id="dd">
+        <table  >
+<button type="button" onclick="myFunction()">Start New</button>
+      <div   id="cc">
+        <input type="button" id="nextMove" value="Your Turn" onclick="nextMove()" style="background-color: blue;" />
+        <!-- <input type="button" id="nextMoves" value="Opponenet's Turn" /> <br> -->
+        <img src="snake/img.gif"  id="mg"/>
+      </div>
+          
+          <tbody>
+            <tr>
+              <td id="a100" ></td>
+              <td id="a99" ></td>
+              <td id="a98" ></td>
+              <td id="a97" ></td>
+              <td id="a96" ></td>
+              <td id="a95" ></td>
+              <td id="a94" ></td>
+              <td id="a93" ></td>
+              <td id="a92" ></td>
+              <td id="a91" ></td>
+            </tr>
+            <tr>
+              <td id="a81" ></td>
+              <td id="a82" ></td>
+              <td id="a83" ></td>
+              <td id="a84" ></td>
+              <td id="a85" ></td>
+              <td id="a86" ></td>
+              <td id="a87" ></td>
+              <td id="a88" ></td>
+              <td id="a89" ></td>
+              <td id="a90" ></td>
+            </tr>
+            <tr>
+              <td id="a80" ></td>
+              <td id="a79" ></td>
+              <td id="a78" ></td>
+              <td id="a77" ></td>
+              <td id="a76" ></td>
+              <td id="a75" ></td>
+              <td id="a74" ></td>
+              <td id="a73" ></td>
+              <td id="a72" ></td>
+              <td id="a71" ></td>
+            </tr>
+            <tr>
+              <td id="a61" ></td>
+              <td id="a62" ></td>
+              <td id="a63" ></td>
+              <td id="a64" ></td>
+              <td id="a65" ></td>
+              <td id="a66" ></td>
+              <td id="a67" ></td>
+              <td id="a68" ></td>
+              <td id="a69" ></td>
+              <td id="a70"></td>
+            </tr>
+            <tr>
+              <td id="a60" ></td>
+              <td id="a59" ></td>
+              <td id="a58" ></td>
+              <td id="a57" ></td>
+              <td id="a56" ></td>
+              <td id="a55" ></td>
+              <td id="a54" ></td>
+              <td id="a53" ></td>
+              <td id="a52" ></td>
+              <td id="a51" ></td>
+            </tr>
+            <tr>
+              
+              <td id="a41" ></td>
+              <td id="a42" ></td>
+              <td id="a43" ></td>
+              <td id="a44" ></td>
+              <td id="a45" ></td>
+              <td id="a46" ></td>
+              <td id="a47" ></td>
+              <td id="a48" ></td>
+              <td id="a49" ></td>
+              <td id="a50"></td>
+            </tr>
+            <tr>
+              <td id="a40" ></td>
+              <td id="a39" ></td>
+              <td id="a38" ></td>
+              <td id="a37" ></td>
+              <td id="a36" ></td>
+              <td id="a35" ></td>
+              <td id="a34" ></td>
+              <td id="a33" ></td>
+              <td id="a32" ></td>
+              <td id="a31" ></td>
+            </tr>
+            <tr>
+              <td id="a21" ></td>
+              <td id="a22" ></td>
+              <td id="a23" ></td>
+              <td id="a24" ></td>
+              <td id="a25" ></td>
+              <td id="a26" ></td>
+              <td id="a27" ></td>
+              <td id="a28" ></td>
+              <td id="a29" ></td>
+              <td id="a30" ></td>
+            </tr>
+            <tr>
+              <td id="a20" ></td>
+              <td id="a19" ></td>
+              <td id="a18" ></td>
+              <td id="a17" ></td>
+              <td id="a16" ></td>
+              <td id="a15" ></td>
+              <td id="a14" ></td>
+              <td id="a13" ></td>
+              <td id="a12" ></td>
+              <td id="a11" ></td>
+            </tr>
+            <tr>
+              <td id="a1" ></td>
+              <td id="a2" ></td>
+              <td id="a3" ></td>
+              <td id="a4" ></td>
+              <td id="a5"  ></td>
+              <td id="a6" ></td>
+              <td id="a7" ></td>
+              <td id="a8" ></td>
+              <td id="a9"  ></td>
+              <td id="a10" ></td>
+            </tr>
+          </tbody>
+          
+        </table>
+        
+     
+      
+      
+      <div id="gg">
+        <input type="button" id="nextMoves" value="Compoter" />
+        <img style="background-color: purple;" src="snake/img.gif"  id="mge"/>
+      </div>
+       </div>
+    </body>
+  </html>
+  <script>
+  function myFunction(){
+  window.location.reload();
+  }
+  var flag;
+  var flag2;
   var c_pos=0;
   var c_post=0;
   var pre=0;
   var prev=0;
-  var turn=2; 
+  var turn=2;
   
+  function nextMove()
+  {
   
- function nextMove()
-        {
-        	 
-    if(turn%2==0){
-           var rdm = Math.floor((Math.random()*6)+1 ); 
-             document.getElementById("mg").src = "img"+rdm+".png";
-	       // if (rdm==0) {
-
-	 	     // rdm=1;
-	 	 
-	 	     //  return rdm;
-	       //   }
-	  
-	        c_pos+=rdm ;
-	        var c="a"+rdm
-	        var pre=c_pos-rdm;
-	        console.log(" Previous:"+pre);
-	        console.log("current:"+c_pos);
-	        console.log( "Random:"+rdm);
-	        console.log( c);
-       
-
-
-
-
-	 if ((pre==0) && (c_pos==2 ||c_pos==3  || c_pos==5||c_pos==6)) {
-      
-   	document.getElementById('a'+c_pos).style.backgroundColor = "blue"; 
-     }else if(c_pos>100){
-  	    console.log(pre);
-   	    document.getElementById("a"+pre).style.backgroundColor = "blue"; 
-   	     c_pos=pre;
-   	}
-     else{  
-   switch(c_pos){
-
-   	case 1:
-   	c_pos=38;
-   	document.getElementById('a1').style.backgroundColor = ""; 
-   	document.getElementById('a38').style.backgroundColor = "blue"; 
-   	break;
-   	case 4:
-   	c_pos=14;
-   	 if (pre==0) {
-   	    
-   	     document.getElementById('a4').style.backgroundColor = ""; 
-   	     document.getElementById('a14' ).style.backgroundColor = "blue"; 
-   	     }else{
-   	 	 document.getElementById('a'+pre).style.backgroundColor = ""; 
-   	     document.getElementById('a14' ).style.backgroundColor = "blue";
-   	    }
-   	break;
-   	case 9:
-   	c_pos=31;
-   	document.getElementById('a'+pre).style.backgroundColor = ""; 
-   	document.getElementById('a'+c_pos).style.backgroundColor = "blue"; 
-   	break;
-   	case 28:
-   	c_pos=84;
-   	console.log(pre);
-   	document.getElementById('a'+pre).style.backgrundColor = ""; 
-   	document.getElementById('a'+c_pos).style.backgroundColor = "blue"; 
-   	break;
-   	case 21:
-   	c_pos=42;
-   	document.getElementById('a'+pre).style.backgroundColor = ""; 
-   	document.getElementById('a'+c_pos).style.backgroundColor = "blue"; 
-   	break;
-   	case 36:
-   	c_pos=44;
-   	document.getElementById('a'+pre).style.backgroundColor = ""; 
-   	document.getElementById('a'+c_pos).style.backgroundColor = "blue"; 
-   	break;
-   	case 51:
-   	c_pos=6
-    document.getElementById('a'+pre).style.backgroundColor = ""; 
-   	document.getElementById('a'+c_pos).style.backgroundColor = "blue"; 
-   	break;
-   	case 71:
-   	c_pos=91;
-   	document.getElementById('a'+pre).style.backgroundColor = ""; 
-   	document.getElementById('a'+c_pos).style.backgroundColor = "blue"; 
-   	break;
-   	case 80:
-   	c_pos=100;
-   	document.getElementById('a'+pre).style.backgroundColor = ""; 
-   	document.getElementById('a100').style.backgroundColor = "blue"; 
-   	break;
-
-
-   	// snake
-   	case 16:
-   	c_pos=6;
-   	document.getElementById('a'+pre).style.backgroundColor = ""; 
-   	document.getElementById('a6').style.backgroundColor = "blue"; 
-   	break;
-   	case 47:
-   	c_pos=26;
-   	document.getElementById('a'+pre).style.backgroundColor = ""; 
-   	document.getElementById('a'+c_pos).style.backgroundColor = "blue"; 
-   	break;
-   	case 49:
-   	c_pos=11;
-   	document.getElementById('a'+pre).style.backgroundColor = ""; 
-   	document.getElementById('a'+c_pos).style.backgroundColor = "blue"; 
-   	break;
-   	case 56:
-   	c_pos=53;
-   	document.getElementById('a'+pre).style.backgroundColor = ""; 
-   	document.getElementById('a'+c_pos).style.backgroundColor = "blue"; 
-   	break;
-   	case 62:
-   	c_pos=19;
-   	document.getElementById('a'+pre).style.backgroundColor = ""; 
-   	document.getElementById('a'+c_pos).style.backgroundColor = "blue"; 
-   	break;
-   	case 64:
-   	c_pos=60;
-   	document.getElementById('a'+pre).style.backgroundColor = ""; 
-   	document.getElementById('a'+c_pos).style.backgroundColor = "blue"; 
-   	break;
-   	case 87:
-   	c_pos=24;
-   	document.getElementById('a'+pre).style.backgroundColor = ""; 
-   	document.getElementById('a'+c_pos).style.backgroundColor = "blue"; 
-   	break;case 93:
-   	c_pos=73;
-   	document.getElementById('a'+pre).style.backgroundColor = ""; 
-   	document.getElementById('a'+c_pos).style.backgroundColor = "blue"; 
-   	break;
-   	case 95:
-   	c_pos=75;
-   	document.getElementById('a'+pre).style.backgroundColor = ""; 
-   	document.getElementById('a'+c_pos).style.backgroundColor = "blue"; 
-   	break;
-   	case 98:
-   	c_pos=78;
-   	document.getElementById('a'+pre).style.backgroundColor = ""; 
-   	document.getElementById('a'+c_pos).style.backgroundColor = "blue"; 
-   	break;
-   	//snake end
-
-    case 100:
-   	    document.getElementById('a'+pre).style.backgroundColor = ""; 
-   	    document.getElementById('a'+c_pos).style.backgroundColor = "blue";
-   		alert("Congratulations, you have won the game :)");
-      
-        
-         break;
-      default:
-     document.getElementById('a'+pre).style.backgroundColor = ""; 
-     document.getElementById('a'+c_pos).style.backgroundColor = "blue";
-      
-     }
-
-    }
-     
-
-       	if(rdm==6){
-     	turn+=2;
-     	console.log("s1:"+rdm );
-     		 document.getElementById( "nextMove").style.backgroundColor = "blue";
-     		  
-     		  
-            }else{
-
-	          
-
-          turn++;
-     	console.log("s1:"+rdm );
-     	document.getElementById("nextMove").style.backgroundColor = "";
-     	 
-     	document.getElementById( "nextMoves").style.backgroundColor = "green";
-	nextMoves();
-            }
+  if(turn%2==0){
+  var rdm = Math.floor((Math.random()*6)+1 );
+  document.getElementById("mg").src = "snake/img"+rdm+".png";
   
-     }  
- 
-}
- 
- 
-
- 
-
-  
-
- function nextMoves()
-{
-
-	setTimeout(function() {//time set out  function start
-        if(turn%2!=0){
-
-     var radm = Math.floor((Math.random()*6)+1 ); 
-     document.getElementById("mge").src = "imge"+radm+".png";
-	 // if (radm==0) {
-
-	 // 	            radm=1;
-	 	 
-	 // 	             return radm;
-	 //              }
-	  
-	 c_post+=radm ;
-	 var c="a"+radm
-	  prev=c_post-radm;
-	 console.log(" Previous:"+prev);
-	 console.log("current:"+c_post);
-	 console.log( "Random:"+radm);
-	 console.log( c);
-
-	  if ((prev==0) &&( c_post==2 ||c_post==3  || c_post==5 || c_post==6)) {//
-      
-            	document.getElementById('a'+c_post).style.backgroundColor = "Green"; 
-     }else if(c_post>100){
-  	            console.log(prev);
-   	            document.getElementById("a"+prev).style.backgroundColor = "Green"; 
-   	             c_post=prev;
-   	}
-     else{   
-         switch(c_post){
-      //ladder
-   	      case 1:
-   	      
-   	     c_post=38;
-   	     document.getElementById('a1').style.backgroundColor = ""; 
-       	 document.getElementById('a38').style.backgroundColor = "Green"; 
-     	 break;
-   	     case 4:
-   	      c_post=14;
-   	     if (prev==0) {
-   	    
-   	     document.getElementById('a4').style.backgroundColor = ""; 
-   	     document.getElementById('a14' ).style.backgroundColor = "Green"; 
-   	     }else{
-   	 	 document.getElementById('a'+prev).style.backgroundColor = ""; 
-   	     document.getElementById('a14' ).style.backgroundColor = "Green";
-   	    }
-   	     break;
-   	     case 9:
-   	      
-   	     c_post=31;
-   	     document.getElementById('a'+prev).style.backgroundColor = ""; 
-   	     document.getElementById('a31').style.backgroundColor = "Green"; 
-   	     break;
-   	     case 28:
-   	     c_post=84;
-   	     document.getElementById('a'+prev).style.backgrundColor = ""; 
-   	     document.getElementById('a48').style.backgroundColor = "Green"; 
-   	     break;
-   	     case 21:
-   	     c_post=42;
-   	     document.getElementById('a'+prev).style.backgroundColor = ""; 
-   	     document.getElementById('a42').style.backgroundColor = "Green"; 
-   	     break;
-   	     case 36:
-   	     c_post=44;
-   	     document.getElementById('a'+prev).style.backgroundColor = ""; 
-   	     document.getElementById('a44').style.backgroundColor = "Green"; 
-   	     break;
-   	     case 51:
-   	     c_post=67;
-   	     document.getElementById('a'+prev).style.backgroundColor = ""; 
-   	     document.getElementById('a67').style.backgroundColor = "Green"; 
-   	     break;
-   	     case 71:
-   	     c_post=91;
-   	     document.getElementById('a'+prev).style.backgroundColor = ""; 
-   	     document.getElementById('a91').style.backgroundColor = "Green"; 
-   	     break;
-   	     case 80:
-   	     c_post=100;
-   	     document.getElementById('a'+prev).style.backgroundColor = ""; 
-   	     document.getElementById('a100').style.backgroundColor = "Green"; 
-   	     alert("Congratulations, computer has won the game :)");
-
-   	     break;
-   //ladder end
-
-   	// snake
-   	     case 16:
-   	     c_post=6;
-   	     document.getElementById('a'+prev).style.backgroundColor = ""; 
-   	     document.getElementById('a6').style.backgroundColor = "Green"; 
-   	     break;
-   	     case 47:
-   	     c_post=26;
-   	     document.getElementById('a'+prev).style.backgroundColor = ""; 
-   	     document.getElementById('a26').style.backgroundColor = "Green"; 
-   	     break;
-   	     case 49:
-   	     c_post=11;
-   	     document.getElementById('a'+prev).style.backgroundColor = ""; 
-   	     document.getElementById('a11').style.backgroundColor = "Green"; 
-   	     break;
-   	     case 56:
-   	     c_post=53;
-   	     document.getElementById('a'+prev).style.backgroundColor = ""; 
-   	     document.getElementById('a53').style.backgroundColor = "Green"; 
-   	     break;
-   	     case 62:
-   	     c_post=19;
-   	     document.getElementById('a'+prev).style.backgroundColor = ""; 
-   	     document.getElementById('a19').style.backgroundColor = "Green"; 
-   	     break;
-   	     case 64:
-   	     c_post=60;
-   	     document.getElementById('a'+prev).style.backgroundColor = ""; 
-   	     document.getElementById('a60').style.backgroundColor = "Green"; 
-   	     break;
-   	     case 87:
-   	     c_post=24;
-   	     document.getElementById('a'+prev).style.backgroundColor = ""; 
-   	     document.getElementById('a24').style.backgroundColor = "Green"; 
-   	     break; 
-   	     case 93:
-   	     c_pos=73;
-   	     document.getElementById('a'+prev).style.backgroundColor = ""; 
-   	     document.getElementById('a73').style.backgroundColor = "Green"; 
-   	     break;
-   	     case 95:
-   	     c_post=75;
-   	     document.getElementById('a'+prev).style.backgroundColor = ""; 
-   	     document.getElementById('a75').style.backgroundColor = "Green"; 
-   	     break;
-   	     case 98:
-   	    c_post=78;
-   	    document.getElementById('a'+prev).style.backgroundColor = ""; 
-   	    document.getElementById('a78').style.backgroundColor = "Green"; 
-   	    break;
-   	    //snake end
-   	    case 100:
-   	    document.getElementById('a'+prev).style.backgroundColor = ""; 
-   	    document.getElementById('a100').style.backgroundColor = "Green";
-   		alert("Congratulations, computer have won the game :)");
-        
-        break;
-        default:
-        document.getElementById('a'+prev).style.backgroundColor = ""; 
-        document.getElementById('a'+c_post).style.backgroundColor = "Green";
+  c_pos+=rdm ;
+  var c="a"+rdm
+  var pre=c_pos-rdm;
    
-   	 
-        }
-    }
-
-
-      
-     	if(radm==6){
-     	turn+=2;
-     	console.log("s2:"+radm );
-
-           
-
-
-     	document.getElementById( "nextMove").style.backgroundColor = "";
-     	 
-     		 nextMoves();
-                 }else{
-
-
-          turn++;
-     	console.log("s2:"+radm );
-     	 
-
-     	 
-     	    document.getElementById( "nextMove").style.backgroundColor = "blue";
-     		document.getElementById( "nextMoves").style.backgroundColor = "";
-                 }
-    
-         }
-
-      }, 1500);
+  if ((pre==0) && (c_pos==2 ||c_pos==3  || c_pos==5||c_pos==6)) {
+  
+  document.getElementById('a'+c_pos).style.backgroundColor = "blue";
+  }else if(c_pos>100){
+  console.log(pre);
+  document.getElementById("a"+pre).style.backgroundColor = "blue";
+  c_pos=pre;
+  }
+  else{
+  switch(c_pos){
+  case 1:
+  c_pos=38;
+  flag2=true;
+  break;
+  case 4:
+  c_pos=14;
+  if (pre==0) {
+  document.getElementById('a4').style.backgroundColor = "";
+  document.getElementById('a14' ).style.backgroundColor = "blue";
+  }else{
+  flag2=true;
+  
+  }
+  break;
+  case 9:
+  c_pos=31;flag2=true;
+  break;
+  case 28:
+  c_pos=84;flag2=true;
+  console.log(pre);
+  break;
+  case 21:
+  c_pos=42;flag2=true;
+  break;
+  case 36:
+  c_pos=44;flag2=true;
+  break;
+  case 51:
+  c_pos=6;flag2=true;
+  break;
+  case 71:
+  c_pos=91;flag2=true;
+  break;
+  case 80:
+  c_pos=100;flag2 =true;
+  alert("Congratulations, you have won the game :)");
+  
+  break;
+  // snake
+  case 16:
+  c_pos=6;flag2=true;
+  break;
+  case 47:
+  c_pos=26;flag2=true;
+  break;
+  case 49:
+  c_pos=11;flag2=true;
+  break;
+  case 56:
+  c_pos=53;flag2=true;
+  break;
+  case 62:
+  c_pos=19;flag2=true;
+  break;
+  case 64:
+  c_pos=60;flag2=true;
+  break;
+  case 87:
+  c_pos=24;flag2=true;
+  break;
+  case 93:
+  c_pos=73;flag2=true;
+  break;
+  case 95:
+  c_pos=75;flag2=true;
+  break;
+  case 98:
+  c_pos=78;flag2=true;
+  break;
+  //snake end
+  case 100:
+  flag2=true;
+  alert("Congratulations, you have won the game :)");
+  break;
+  default:flag2=true;
+  
+  }
+  }
+  
+  if(rdm==6){
+  turn+=2;
+  console.log("s1:"+rdm );
+  document.getElementById( "nextMove").style.backgroundColor = "blue";
+  }else{
+  
+  turn++;
+  console.log("s1:"+rdm );
+  document.getElementById( "nextMoves").style.backgroundColor = "green";
+  nextMoves();
+  }
+  
+  }
+  if(flag2==true){
    
-}
+  document.getElementById('a'+pre).style.backgroundColor = "";
+  document.getElementById('a'+c_pos).style.backgroundColor = "blue";
+  }
+  }
+  
+  function nextMoves()
+  {
+  setTimeout(function() {//time set out  function start
+  if(turn%2!=0){
+  var radm = Math.floor((Math.random()*6)+1 );
+  document.getElementById("mge").src = "snake/imge"+radm+".png";
+  
+  c_post+=radm ;
+  var c="a"+radm
+  prev=c_post-radm;
+  
+   
+  console.log( c);
+  if ((prev==0) &&( c_post==2 ||c_post==3  || c_post==5 || c_post==6)) {//
+  
+  document.getElementById('a'+c_post).style.backgroundColor = "Green";
+  }else if(c_post>100){
+  console.log(prev);
+  document.getElementById("a"+prev).style.backgroundColor = "Green";
+  c_post=prev;
+  }
+  else{
+  switch(c_post){
+  //ladder start
+  case 1:
+  c_post=38;
+  flag=true;
+  break;
+  case 4:
+  c_post=14;
+  if (prev==0) {
+  document.getElementById('a4').style.backgroundColor = "";
+  document.getElementById('a14' ).style.backgroundColor = "Green";
+  }else{
+  flag=true;
+  }
+  break;
+  case 9:
+  c_post=31;flag=true;
+  break;
+  case 28:
+  c_post=84;flag=true;
+  break;
+  case 21:
+  c_post=42;flag=true;
+  break;
+  case 36:
+  c_post=44;flag=true;
+  break;
+  case 51:
+  c_post=67;flag=true;
+  break;
+  case 71:
+  c_post=91;flag=true;
+  break;
+  case 80:
+  c_post=100;flag=true;
+  alert("Congratulations, computer has won the game :)");
+  
+  break;
+  //ladder end
+  // snake start
+  case 16:
+  c_post=6;flag=true;
+  break;
+  case 47:
+  c_post=26;flag=true;
+  break;
+  case 49:
+  c_post=11;flag=true;
+  break;
+  case 56:
+  c_post=53;flag=true;
+  break;
+  case 62:
+  c_post=19;flag=true;
+  break;
+  case 64:
+  c_post=60;flag=true;
+  break;
+  case 87:
+  c_post=24;flag=true;
+  break;
+  case 93:
+  c_post=73;flag=true;
+  break;
+  case 95:
+  c_post=75;flag=true;
+  break;
+  case 98:
+  c_post=78;flag=true;
+  break;
+  //snake end
+  case 100:
+  c_post=100;flag=true;
+  alert("Congratulations, computer have won the game :)");
+  
+  break;
+  default:
+  flag=true;
+  }
+  if(flag==true){
  
-</script>
+  document.getElementById('a'+prev).style.backgroundColor = "";
+  document.getElementById('a'+c_post).style.backgroundColor = "Green";
+  
+  }
+  }
+  
+  if(radm==6){
+  turn+=2;
+  console.log("s2:"+radm );
+  
+  document.getElementById( "nextMove").style.backgroundColor = "";
+  
+  nextMoves();
+  }else{
+  turn++;
+  console.log("s2:"+radm );
+  document.getElementById( "nextMove").style.backgroundColor = "blue";
+  document.getElementById( "nextMoves").style.backgroundColor = "";
+  }
+  
+  }
+  }, 1500);
+  
+  }
+  
+  </script>
